@@ -8,7 +8,7 @@ const DIRECTIONS = [
 ];
 
 function normalize(s) {
-  return s.toLowerCase().replace(/[.,!?;:'"()\-]/g, '').replace(/\s+/g, ' ').trim();
+  return s.toLowerCase().replace(/[.,!?;:'"()-]/g, '').replace(/\s+/g, ' ').trim();
 }
 
 export default function SentencePractice({ sentences, apiKey }) {
