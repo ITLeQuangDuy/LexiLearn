@@ -98,10 +98,9 @@ export default function VocabQuiz({ vocab }) {
     setHistory([]);
   }, [vocab, mode, sessionSize]);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (vocab.length > 0) startSession();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const currentQ = session?.[idx];
 
