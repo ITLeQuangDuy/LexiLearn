@@ -44,3 +44,21 @@ button { cursor: pointer; font-family: var(--font-display); }
 input, textarea { font-family: var(--font-display); }
 
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Hide desktop header nav, show mobile bottom nav */
+  .desktop-nav  { display: none !important; }
+  .mobile-nav   { display: flex !important; }
+
+  /* Tighter main padding on mobile */
+  main { padding: 16px 12px 88px !important; }
+
+  /* Cards full width */
+  .card-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (min-width: 641px) {
+  .mobile-nav { display: none !important; }
+  .desktop-nav { display: flex !important; }
+}

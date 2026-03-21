@@ -8,7 +8,7 @@ const DIRECTIONS = [
 ];
 
 function normalize(s) {
-  return s.toLowerCase().replace(/[.,!?;:'"()-]/g, '').replace(/\s+/g, ' ').trim();
+  return s.toLowerCase().replace(/[.,!?;:'"()\-]/g, '').replace(/\s+/g, ' ').trim();
 }
 
 export default function SentencePractice({ sentences, apiKey }) {
@@ -22,7 +22,6 @@ export default function SentencePractice({ sentences, apiKey }) {
   const [aiLoading, setAiLoading] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
   const [stats, setStats] = useState({ correct: 0, partial: 0, wrong: 0, total: 0 });
-  // eslint-disable-next-line no-unused-vars
   const [history, setHistory] = useState([]);
   const [started, setStarted] = useState(false);
 
